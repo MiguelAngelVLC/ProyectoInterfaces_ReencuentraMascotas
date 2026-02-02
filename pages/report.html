@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reportar Animal - Reencuentra Mascotas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" crossorigin href="/ProyectoInterfaces_ReencuentraMascotas/assets/bootstrap-Cq2yHVsj.css">
+  </head>
+  <body style="background-color: #023d7f;">
+    <header class="encabezado">
+      <div class="container-fluid">
+        <div class="d-flex align-items-center">
+          <div class="d-flex align-items-center flex-grow-1">
+            <div class="logo">
+              <img src="/ProyectoInterfaces_ReencuentraMascotas/assets/world-animal-day_8418203-CeqgX8XW.png" class="img-fluid" alt="Logo">
+            </div>
+          </div>
+          <div class="text-center">
+            <span class="nombre-marca fw-bold h1">Reencuentra Mascotas</span>
+          </div>
+          <div class="d-flex justify-content-end flex-grow-1">
+            <a href="#" class="boton-perfil d-flex align-items-center">
+              <div class="avatar-perfil me-2">
+                <img src="/ProyectoInterfaces_ReencuentraMascotas/assets/programmer_560277-nAXYcdzM.png" class="img-fluid" alt="Foto perfil">
+              </div>
+              <span>Perfil Usuario</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container my-5">
+      <div class="report-form card p-4">
+        <a href="/index.html" class="btn btn-warning mb-3">&larr; Volver</a>
+        <h1 class="h3 mb-2">Reportar Animal</h1>
+        <p class="text-muted mb-4">Completa el formulario para reportar un animal perdido o encontrado</p>
+
+        <form id="reportForm" novalidate>
+          <div class="mb-3">
+            <label class="form-label">Estado del Animal</label>
+            <div class="btn-group d-flex" role="group" aria-label="Estado">
+              <input type="radio" class="btn-check" name="estado" id="estado-perdido" value="perdido" autocomplete="off" checked>
+              <label class="btn btn-outline-danger flex-fill" for="estado-perdido">He perdido a mi mascota</label>
+
+              <input type="radio" class="btn-check" name="estado" id="estado-encontrado" value="encontrado" autocomplete="off">
+              <label class="btn btn-outline-success flex-fill" for="estado-encontrado">He encontrado un animal</label>
+            </div>
+          </div>
+
+          <div class="row g-3">
+            <div class="col-md-4">
+              <label class="form-label">Tipo de Animal</label>
+              <select class="form-select" name="tipo" id="tipo">
+                <option value="perro">Perro</option>
+                <option value="gato">Gato</option>
+                <option value="ave">Ave</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Nombre</label>
+              <input type="text" class="form-control" name="nombre" placeholder="Ej. Max">
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Raza</label>
+              <input type="text" class="form-control" name="raza" placeholder="Ej. Labrador">
+            </div>
+          </div>
+
+          <div class="row g-3 mt-2">
+            <div class="col-md-4">
+              <label class="form-label">Color</label>
+              <input type="text" class="form-control" name="color" placeholder="Ej. Marrón, Negro, Blanco">
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Tamaño</label>
+              <select class="form-select" name="tamano">
+                <option value="pequeno">Pequeño</option>
+                <option value="mediano">Mediano</option>
+                <option value="grande">Grande</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Fecha</label>
+              <input type="date" class="form-control" name="fecha">
+            </div>
+          </div>
+
+          <div class="mb-3 mt-3">
+            <label class="form-label">Descripción</label>
+            <textarea class="form-control" name="descripcion" rows="3" placeholder="Describe al animal en detalle.."></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Características Distintivas</label>
+            <input type="text" class="form-control" name="caracteristicas" placeholder="El Collar rojo, mancha blanca en pata, separadas por comas">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Ubicación</label>
+            <input type="text" class="form-control" name="ubicacion" placeholder="Ej: Parque Central, Madrid">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">URL de Imagen</label>
+            <input type="url" class="form-control" name="imagen" placeholder="https://ejemplo.com/imagen.jpg">
+            <div class="form-text">Ingresa la URL de una imagen del animal</div>
+          </div>
+
+          <hr>
+
+          <h5>Información de Contacto</h5>
+
+          <div class="row g-3 mt-2">
+            <div class="col-md-4">
+              <label class="form-label">Tu Nombre *</label>
+              <input type="text" class="form-control" name="contacto_nombre" placeholder="E): Juan Pérez" required>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Teléfono *</label>
+              <input type="tel" class="form-control" name="contacto_telefono" placeholder="+34 600 000 000" required>
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" name="contacto_email" placeholder="tu@email.com">
+            </div>
+          </div>
+
+          <p class="form-text text-muted mt-3">Asegúrate de proporcionar información precisa y verificable. Los datos de contacto serán visibles para otros usuarios.</p>
+
+          <div class="d-flex justify-content-end gap-2 mt-3">
+            <button type="reset" class="btn btn-secondary">Cancelar</button>
+            <button type="submit" class="btn btn-primary">Publicar Reporte</button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <footer class="pie-pagina mt-5">
+      <div class="titulo-pie">Reencuentra Mascotas</div>
+      <div class="texto-pie">Conectando familias con sus mascotas perdidas</div>
+      <div class="texto-pie">© 2025 ReencuentraMascotas. Todos los derechos reservados.</div>
+    </footer>
+
+    <script>
+      // Simple manejador: evita envío real y valida campos requeridos
+      document.getElementById('reportForm')?.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const form = e.target;
+        if (!form.reportValidity()) {
+          // HTML5 mostrará errores
+          return;
+        }
+        // Recolectar datos (aquí podrías enviar a API)
+        const data = Object.fromEntries(new FormData(form).entries());
+        console.log('Reporte enviado', data);
+        alert('Reporte preparado. (Simulación) — Ver consola para datos.');
+        form.reset();
+      });
+    </script>
+  </body>
+</html>

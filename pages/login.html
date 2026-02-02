@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acceder - Reencuentra Mascotas</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="/ProyectoInterfaces_ReencuentraMascotas/assets/main-CxlNbtAF.js"></script>
+    <link rel="stylesheet" crossorigin href="/ProyectoInterfaces_ReencuentraMascotas/assets/main-vkLJH3Tz.css">
+    <link rel="stylesheet" crossorigin href="/ProyectoInterfaces_ReencuentraMascotas/assets/bootstrap-Cq2yHVsj.css">
+  </head>
+
+  <body>
+    <header class="encabezado">
+      <div class="container-fluid">
+        <div class="d-flex align-items-center">
+          <div class="d-flex align-items-center flex-grow-1">
+            <div class="logo">
+              <img src="/ProyectoInterfaces_ReencuentraMascotas/assets/world-animal-day_8418203-CeqgX8XW.png" class="img-fluid" alt="Logo">
+            </div>
+          </div>
+
+          <div class="text-center">
+            <span class="nombre-marca fw-bold h1">Reencuentra Mascotas</span>
+          </div>
+
+          <div class="d-flex justify-content-end flex-grow-1">
+            <a href="#" class="boton-perfil d-flex align-items-center">
+              <div class="avatar-perfil me-2">
+                <img src="/ProyectoInterfaces_ReencuentraMascotas/assets/programmer_560277-nAXYcdzM.png" class="img-fluid" alt="Foto perfil">
+              </div>
+              <span>Perfil Usuario</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <nav class="d-flex justify-content-center align-items-center bg-info py-2">
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">Sobre Nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contacto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="login.html">Registro</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="contenedor-app">
+      <section class="seccion-principal">
+        <h1 class="titulo-principal">Accede a tu cuenta</h1>
+        <p class="subtitulo-principal">Introduce tus credenciales para administrar tus reportes.</p>
+
+        <div class="row justify-content-center">
+          <div class="col-md-6 col-lg-4">
+            <div class="tarjeta-paso p-4">
+              <form id="login-form">
+                <div class="mb-3">
+                  <label for="login-email" class="form-label">Correo electrónico</label>
+                  <input id="login-email" type="email" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                  <label for="login-pass" class="form-label">Contraseña</label>
+                  <input id="login-pass" type="password" class="form-control" required>
+                </div>
+
+                <div id="login-feedback" class="mb-3" role="status" aria-live="polite"></div>
+
+                <button type="submit" class="btn btn-success btn-crear-reporte w-100">Entrar</button>
+              </form>
+            </div>
+            <p class="mt-1 text-center"><a href="contact.html">¿Olvidaste tu contraseña?</a></p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="pie-pagina">
+        <div class="titulo-pie">Reencuentra Mascotas</div>
+        <div class="texto-pie">Conectando familias con sus mascotas perdidas</div>
+        <div class="texto-pie">© 2025 ReencuentraMascotas. Todos los derechos reservados.</div>
+      </footer>
+    </div>
+
+
+    <div id="app"></div>
+  </body>
+</html>
