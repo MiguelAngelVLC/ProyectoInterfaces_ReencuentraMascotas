@@ -1,0 +1,555 @@
+ * {
+     font-family: 'Roboto', sans-serif;
+ }
+
+ body {
+     background-color: #f8f9fa;
+ }
+
+ .contenedor-app {
+     background-color: #023d7f;
+     min-height: 100vh;
+     padding-top: 30px; /* Evita el colapso de márgenes con el primer hijo */
+ }
+
+ /* Header */
+ .encabezado {
+     background-color: #fff;
+     padding: 15px 30px;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ }
+
+ .logo {
+     width: 50px;
+     height: 50px;
+     background-color: #4ecdc4;
+     border-radius: 8px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 24px;
+ }
+
+ .nombre-marca {
+     font-size: 24px;
+     font-weight: 600;
+     color: #212529;
+     margin-left: 15px;
+ }
+
+ nav {
+     background-color: #33a9c7;
+ } 
+
+ .nav-pills .nav-link {
+     color: #495057;
+     background-color: #e9ecef;
+     border-radius: 18px;
+     padding: 8px 20px;
+     margin: 0 5px;
+     transition: all 0.3s;
+ }
+
+ .nav-pills .nav-link.active {
+     background-color: #529bee;
+     color: white;
+ }
+
+ .boton-perfil {
+     display: flex;
+     align-items: center;
+     gap: 10px;
+     background-color: #e9ecef;
+     border-radius: 20px;
+     padding: 5px 15px;
+     text-decoration: none;
+     color: #212529;
+ }
+
+ .avatar-perfil {
+     width: 35px;
+     height: 35px;
+     background-color: #ff6b6b;
+     border-radius: 50%;
+ }
+
+ /* Sección Principal */
+ .seccion-principal {
+     background-color: #fff;
+     border-radius: 16px;
+     margin: 0 30px 30px; /* quitar margen superior para evitar colapso */
+     padding: 30px;
+     text-align: center;
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ }
+
+ .imagenFondo {
+    background:linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url("../imagenes/photo-1450778869180-41d0601e046e.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+    border-radius: 16px;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+ }
+
+ .titulo-principal {
+     font-size: 32px;
+     font-weight: 700;
+     color: #000000;
+     margin-bottom: 20px;
+ }
+
+ .subtitulo-principal {
+     font-size: 16px;
+     color: #000000;
+     max-width: 600px;
+     margin: 0 auto 20px;
+ }
+
+ /* Sección Estadísticas */
+ .seccion-estadisticas {
+     padding: 30px;
+ }
+
+ .tarjeta-estadistica {
+     background-color: #fff;
+     border: 1.6px solid #e9ecef;
+     border-radius: 16px;
+     padding: 20px;
+     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+     display: flex;
+     align-items: center;
+     gap: 15px;
+ }
+
+ .icono-estadistica {
+     width: 40px;
+     height: 40px;
+     border-radius: 16px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 20px;
+ }
+
+ .icono-estadistica.perdido {
+     background-color: #ff6b6b;
+ }
+
+ .icono-estadistica.encontrado {
+     background-color: #4ecdc4;
+ }
+
+ .icono-estadistica.total {
+     background-color: #ffe66d;
+ }
+
+ .etiqueta-estadistica {
+     font-size: 16px;
+     color: #495057;
+     margin: 0;
+ }
+
+ .numero-estadistica {
+     font-size: 24px;
+     font-weight: 600;
+     color: #343a40;
+     margin: 0;
+ }
+
+ /* Sección Cómo Funciona */
+ .como-funciona {
+     background-color: rgba(255, 255, 255, 0.24);
+     padding: 40px 30px;
+     margin: 30px;
+     border-radius: 16px;
+ }
+
+ .titulo-seccion {
+     font-size: 32px;
+     font-weight: 700;
+     color: #000000;
+     text-align: center;
+     margin-bottom: 30px;
+ }
+
+ .tarjeta-paso {
+     background-color: #fff;
+     border: 1.6px solid #e9ecef;
+     border-radius: 16px;
+     padding: 30px 20px;
+     text-align: center;
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+     height: 100%;
+ }
+
+ .numero-paso {
+     width: 80px;
+     height: 80px;
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 48px;
+     font-weight: 700;
+     color: #212529;
+     margin: 0 auto 15px;
+     border: 2px solid;
+ }
+
+ .numero-paso.paso-1 {
+     background-color: #ff6b6b;
+     border-color: #ff6b6b;
+ }
+
+ .numero-paso.paso-2 {
+     background-color: #4ecdc4;
+     border-color: #4ecdc4;
+ }
+
+ .numero-paso.paso-3 {
+     background-color: #ffe66d;
+     border-color: #ffd93d;
+ }
+
+ .titulo-paso {
+     font-size: 20px;
+     font-weight: 600;
+     color: #495057;
+     margin-bottom: 10px;
+ }
+
+ .descripcion-paso {
+     font-size: 16px;
+     color: #495057;
+     line-height: 1.6;
+ }
+
+ /* Reports Section */
+ .seccion-reportes {
+     padding: 30px;
+ }
+
+ .encabezado-seccion {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: 30px;
+ }
+
+ .encabezado-seccion h2 {
+     font-size: 32px;
+     font-weight: 700;
+     color: #ffffff;
+     margin: 0;
+ }
+
+ .btn-ver-todos {
+     background-color: #ff6b6b;
+     color: #212529;
+     border: none;
+     border-radius: 20px;
+     padding: 8px 20px;
+     font-size: 16px;
+     display: flex;
+     align-items: center;
+     gap: 8px;
+ }
+
+ /* Tarjetas de Animales */
+ .tarjeta-animal {
+     background-color: #fff;
+     border: 1.6px solid #868e96;
+     border-radius: 16px;
+     overflow: hidden;
+     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.7);
+     margin-bottom: 30px;
+     height: 100%;
+ }
+
+ /* Clase para ocultar tarjetas al filtrar */
+ .tarjeta-animal.hidden { display: none !important; }
+ .nav-link.filter-active { color: white; }
+ .nav-link.filter-active.perdido { background-color: #ff6b6b; }
+ .nav-link.filter-active.encontrado { background-color: #4ecdc4; }
+
+ .imagen-tarjeta-animal {
+     width: 100%;
+     height: 192px;
+     object-fit: cover;
+     position: relative;
+ }
+
+ .cuerpo-tarjeta-animal {
+     padding: 20px;
+ }
+
+ .insignia-estado {
+     position: absolute;
+     top: 16px;
+     right: 16px;
+     padding: 4px 12px;
+     border-radius: 20px;
+     font-size: 16px;
+     font-weight: 400;
+     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+ }
+
+ .insignia-estado.perdido {
+     background-color: #ff6b6b;
+     color: black;
+ }
+
+ .insignia-estado.encontrado {
+     background-color: #4ecdc4;
+     color: black;
+ }
+
+ .nombre-animal {
+     font-size: 24px;
+     font-weight: 600;
+     color: #343a40;
+     margin-bottom: 5px;
+ }
+
+ .raza-animal {
+     font-size: 16px;
+     color: #495057;
+     margin-bottom: 15px;
+ }
+
+ .tipo-animal {
+     display: inline-flex;
+     align-items: center;
+     gap: 5px;
+     font-size: 16px;
+     color: #868e96;
+     text-transform: capitalize;
+ }
+
+ .descripcion-animal {
+     font-size: 16px;
+     color: #495057;
+     line-height: 1.6;
+     margin-bottom: 15px;
+ }
+
+ .info-animal {
+     font-size: 16px;
+     color: #868e96;
+     margin-bottom: 8px;
+     display: flex;
+     align-items: center;
+     gap: 8px;
+ }
+
+ .seccion-contacto {
+     border-top: 1px solid #e9ecef;
+     padding-top: 15px;
+     margin-top: 15px;
+ }
+
+ .etiqueta-contacto {
+     font-size: 16px;
+     color: #495057;
+     font-weight: 500;
+     margin-bottom: 10px;
+ }
+
+ .info-contacto {
+     font-size: 16px;
+     color: #495057;
+     display: flex;
+     align-items: center;
+     gap: 8px;
+     margin-bottom: 8px;
+ }
+
+ /* Sección CTA */
+ .seccion-cta {
+     background: linear-gradient(to bottom, #4ecdc4, #45b8b0);
+     border: 1.6px solid #45b8b0;
+     border-radius: 16px;
+     padding: 40px 30px;
+     margin: 30px;
+     text-align: center;
+     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+ }
+
+ .titulo-cta {
+     font-size: 32px;
+     font-weight: 700;
+     color: #212529;
+     margin-bottom: 15px;
+ }
+
+ .descripcion-cta {
+     font-size: 16px;
+     color: #212529;
+     opacity: 0.9;
+     max-width: 700px;
+     margin: 0 auto 25px;
+ }
+
+ .btn-crear-reporte {
+     background-color: rgba(248, 249, 250, 0.63);
+     border: 2.4px solid #212529;
+     border-radius: 24px;
+     padding: 12px 40px;
+     font-size: 16px;
+     color: #212529;
+     font-weight: 500;
+     box-shadow: 0 15px 22px -4px rgba(0, 0, 0, 0.1);
+ }
+
+ /* Paginación */
+ .seccion-paginacion {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 20px 30px;
+     margin-top: 30px;
+ }
+
+ .pagination .page-link {
+     color: #495057;
+     border: none;
+     margin: 0 2px;
+ }
+
+ .pagination .page-item.active .page-link {
+     background-color: #529bee;
+     color: white;
+ }
+
+ /* Footer */
+ .pie-pagina {
+     background-color: #529bee;
+     padding: 30px;
+     text-align: center;
+     color: #212529;
+ }
+
+ .titulo-pie {
+     font-size: 20px;
+     font-weight: 600;
+     margin-bottom: 10px;
+ }
+
+ .texto-pie {
+     font-size: 14px;
+     margin-bottom: 5px;
+ }
+
+ .envoltura-imagen {
+     position: relative;
+ }
+ /* Modal detalle de tarjeta */
+ .modal-overlay {
+     position: fixed;
+     inset: 0;
+     background: rgba(0,0,0,0.6);
+     display: none;
+     align-items: center;
+     justify-content: center;
+     z-index: 1050;
+     padding: 20px;
+ }
+
+ .modal-overlay.open {
+     display: flex;
+ }
+
+ .modal-content {
+     background-color: #ffffff !important;
+     border-radius: 12px;
+     position: relative;
+     max-width: 1000px;
+     width: 100%;
+     box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+     border: 1px solid #e9ecef;
+     overflow: hidden;
+     transform: translateY(10px);
+     animation: modalIn 220ms ease-out forwards;
+     opacity: 1;
+ }
+
+ @keyframes modalIn {
+     from { opacity: 0; transform: translateY(20px) scale(0.98); }
+     to { opacity: 1; transform: translateY(0) scale(1); }
+ }
+
+ .modal-body {
+     display: flex;
+     gap: 20px;
+     align-items: stretch;
+ }
+
+ .modal-left {
+     flex: 1 1 45%;
+     min-width: 220px;
+     max-height: 70vh;
+     overflow: hidden;
+ }
+
+ .modal-imagen {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     display: block;
+ }
+
+ .modal-right {
+     flex: 1 1 55%;
+     padding: 24px;
+ }
+
+ .modal-nombre {
+     margin: 0 0 6px 0;
+     font-size: 24px;
+     font-weight: 700;
+ }
+
+ .modal-estado {
+     margin: 0 0 10px 0;
+     font-weight: 600;
+     color: #fff;
+     display: inline-block;
+     padding: 6px 12px;
+     border-radius: 14px;
+     background: #ff6b6b; /* se actualizará si es encontrado */
+ }
+
+ .modal-raza,
+ .modal-descripcion,
+ .modal-info div { margin-bottom: 10px; color: #495057; }
+
+ .modal-contacto h4 { margin-top: 16px; margin-bottom: 8px; }
+
+ .modal-close {
+     position: absolute;
+     right: 16px;
+     top: 12px;
+     background: transparent;
+     border: none;
+     font-size: 28px;
+     color: #343a40;
+     cursor: pointer;
+ }
+
+ @media (max-width: 768px) {
+     .modal-body { flex-direction: column; }
+     .modal-left { max-height: 40vh; }
+ }
+
+ /* Estilos para la página Reportar */
+ .report-form { max-width: 900px; margin: 0 auto; }
+ .report-form .form-label { font-weight: 600; }
+ .report-form .btn-group .btn { text-align: center; }
+ .report-form .form-text { color: #6c757d; }
+ .report-form .btn-primary { background: #529bee; border-color: #529bee; }
+
+ @media (max-width: 576px) {
+   .report-form { padding: 16px; }
+ }

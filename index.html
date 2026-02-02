@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reencuentra Mascotas</title> 
+
+    <!-- Google Fonts - Roboto // En caso de que no esté instalada en el sitema la fuente. -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head> 
+
+  <body> 
+    <!-- Cabecera -->
+    <header class="encabezado">
+      <div class="container-fluid">
+        <div class="d-flex align-items-center">
+
+                <!-- IZQUIERDA -->
+          <div class="d-flex align-items-center flex-grow-1">
+            <div class="logo">
+              <img src="imagenes/world-animal-day_8418203.png" class="img-fluid" alt="Logo">
+            </div>
+          </div>
+
+                <!-- CENTRO -->
+          <div class="text-center">
+            <span class="nombre-marca fw-bold h1">Reencuentra Mascotas</span>
+          </div>
+
+                <!-- DERECHA -->
+          <div class="d-flex justify-content-end flex-grow-1">
+            <a href="pages/login.html" class="boton-perfil d-flex align-items-center">
+              <div class="avatar-perfil me-2">
+                <img src="imagenes/programmer_560277.png" class="img-fluid" alt="Foto perfil">
+              </div>
+              <span>Perfil Usuario</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    <!-- Navegación -->
+    <nav class="d-flex justify-content-center align-items-center py-2">
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a id="filter-perdidos" class="nav-link" href="#">Perdidos</a>
+        </li>
+        <li class="nav-item">
+          <a id="filter-encontrados" class="nav-link" href="#">Encontrados</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="pages/about.html">Sobre Nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="pages/contact.html">Contacto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="pages/login.html">Registro</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main App Container -->
+    <div class="contenedor-app">
+      <!-- Sección Principal -->
+      <section class="seccion-principal">
+        <div class="imagenFondo">
+          <h1 class="titulo-principal">Ayudemos a reunir familias</h1>
+          <p class="subtitulo-principal">Conectamos animales perdidos y encontrados con sus familias. Cada publicación puede ser el comienzo de un feliz reencuentro.</p>
+        </div>
+      </section>
+
+      <!-- Sección Estadísticas -->
+      <section class="seccion-estadisticas">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="tarjeta-estadistica">
+              <div class="icono-estadistica perdido">
+                <i class="bi bi-search text-dark"></i>
+              </div>
+              <div class="flex-grow-1">
+                <p class="etiqueta-estadistica">Animales Perdidos</p>
+              </div>
+              <h2 class="numero-estadistica">3</h2>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="tarjeta-estadistica">
+              <div class="icono-estadistica encontrado">
+                <i class="bi bi-heart text-danger"></i>
+              </div>
+              <div class="flex-grow-1">
+                <p class="etiqueta-estadistica">Animales Encontrados</p>
+              </div>
+              <h2 class="numero-estadistica">3</h2>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="tarjeta-estadistica">
+              <div class="icono-estadistica total">
+                <i class="bi bi-flag-fill text-dark"></i>
+              </div>
+              <div class="flex-grow-1">
+                <p class="etiqueta-estadistica">Total de Reportes</p>
+              </div>
+              <h2 class="numero-estadistica">6</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección Cómo Funciona -->
+      <section class="como-funciona">
+        <h2 class="titulo-seccion">¿Cómo funciona?</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="tarjeta-paso">
+              <div class="numero-paso paso-1">1</div>
+              <h3 class="titulo-paso">Reporta</h3>
+              <p class="descripcion-paso">Publica información sobre el animal perdido o encontrado con fotos y detalles
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="tarjeta-paso">
+              <div class="numero-paso paso-2">2</div>
+              <h3 class="titulo-paso">Conecta</h3>
+              <p class="descripcion-paso">La comunidad busca coincidencias entre animales perdidos y encontrados</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="tarjeta-paso">
+              <div class="numero-paso paso-3">3</div>
+              <h3 class="titulo-paso">Reúne</h3>
+              <p class="descripcion-paso">Contacta directamente y ayuda a reunir a las familias con sus mascotas</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección Reportes -->
+      <section class="seccion-reportes">
+        <div class="encabezado-seccion">
+          <h2>Reportes Recientes</h2>
+          <button id="btn-ver-todos" class="btn btn-success">
+            Ver todos
+            <i class="bi bi-arrow-up-right"></i>
+          </button>
+        </div>
+
+        <div class="row g-4">
+          <!-- Card 1 - Max (Perdido) -->
+          <div class="col-md-4">
+            <div class="tarjeta-animal">
+              <div class="envoltura-imagen">
+                <img src="imagenes/photo-1543466835-00a7907e9de1.jpg" alt="Max"
+                  class="imagen-tarjeta-animal">
+                <span class="insignia-estado perdido">PERDIDO</span>
+              </div>
+              <div class="cuerpo-tarjeta-animal">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <div>
+                    <h3 class="nombre-animal">Max</h3>
+                    <p class="raza-animal">Labrador Retriever</p>
+                  </div>
+                  <span class="tipo-animal">
+                    <i class="bi bi-tag"></i>
+                    perro
+                  </span>
+                </div>
+                <p class="descripcion-animal">Perro labrador muy amigable, se perdió cerca del parque. Responde a su
+                  nombre y le encanta jugar con pelotas.</p>
+                <div class="info-animal">
+                  <i class="bi bi-geo-alt"></i>
+                  <span>Parque del Retiro, Madrid</span>
+                </div>
+                <div class="info-animal">
+                  <i class="bi bi-calendar"></i>
+                  <span>28/11/2024</span>
+                </div>
+                <div class="seccion-contacto">
+                  <p class="etiqueta-contacto">Contacto:</p>
+                  <div class="info-contacto">
+                    <i class="bi bi-person"></i>
+                    <span>María García</span>
+                  </div>
+                  <div class="info-contacto">
+                    <i class="bi bi-telephone"></i>
+                    <span>+34 612 345 678</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 - Luna (Encontrado) -->
+          <div class="col-md-4">
+            <div class="tarjeta-animal">
+              <div class="envoltura-imagen">
+                <img src="imagenes/photo-1574158622682-e40e69881006.jpg" alt="Luna"
+                  class="imagen-tarjeta-animal">
+                <span class="insignia-estado encontrado">ENCONTRADO</span>
+              </div>
+              <div class="cuerpo-tarjeta-animal">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <div>
+                    <h3 class="nombre-animal">Luna</h3>
+                    <p class="raza-animal">Siamés</p>
+                  </div>
+                  <span class="tipo-animal">
+                    <i class="bi bi-tag"></i>
+                    gato
+                  </span>
+                </div>
+                <p class="descripcion-animal">Gata siamesa encontrada cerca de la estación. Es muy tímida pero dócil.
+                  Parece estar bien cuidada.</p>
+                <div class="info-animal">
+                  <i class="bi bi-geo-alt"></i>
+                  <span>Estación de Atocha, Madrid</span>
+                </div>
+                <div class="info-animal">
+                  <i class="bi bi-calendar"></i>
+                  <span>29/11/2024</span>
+                </div>
+                <div class="seccion-contacto">
+                  <p class="etiqueta-contacto">Contacto:</p>
+                  <div class="info-contacto">
+                    <i class="bi bi-person"></i>
+                    <span>Carlos Rodríguez</span>
+                  </div>
+                  <div class="info-contacto">
+                    <i class="bi bi-telephone"></i>
+                    <span>+34 623 456 789</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 - Rocky (Encontrado) -->
+          <div class="col-md-4">
+            <div class="tarjeta-animal">
+              <div class="envoltura-imagen">
+                <img src="imagenes/photo-1568572933382-74d440642117.jpg" alt="Rocky"
+                  class="imagen-tarjeta-animal">
+                <span class="insignia-estado encontrado">ENCONTRADO</span>
+              </div>
+              <div class="cuerpo-tarjeta-animal">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <div>
+                    <h3 class="nombre-animal">Rocky</h3>
+                    <p class="raza-animal">Pastor Alemán</p>
+                  </div>
+                  <span class="animal-type">
+                    <i class="bi bi-tag"></i>
+                    perro
+                  </span>
+                </div>
+                <p class="descripcion-animal">Pastor alemán encontrado deambulando por la zona. Parece hambriento y
+                  asustado pero es amigable.</p>
+                <div class="info-animal">
+                  <i class="bi bi-geo-alt"></i>
+                  <span>Chamartín, Madrid</span>
+                </div>
+                <div class="info-animal">
+                  <i class="bi bi-calendar"></i>
+                  <span>27/11/2024</span>
+                </div>
+                <div class="seccion-contacto">
+                  <p class="etiqueta-contacto">Contacto:</p>
+                  <div class="info-contacto">
+                    <i class="bi bi-person"></i>
+                    <span>Ana Martínez</span>
+                  </div>
+                  <div class="info-contacto">
+                    <i class="bi bi-telephone"></i>
+                    <span>+34 634 567 890</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 - Michi (Perdido) -->
+          <div class="col-md-4">
+            <div class="tarjeta-animal">
+              <div class="envoltura-imagen">
+                <img src="imagenes/a421f91a-353b-44c0-b48c-ea69bca4750c.png" alt="Michi"
+                  class="imagen-tarjeta-animal">
+                <span class="insignia-estado perdido">PERDIDO</span>
+              </div>
+              <div class="cuerpo-tarjeta-animal">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <div>
+                    <h3 class="nombre-animal">Michi</h3>
+                    <p class="raza-animal">Común Europeo</p>
+                  </div>
+                  <span class="tipo-animal">
+                    <i class="bi bi-tag"></i>
+                    gato
+                  </span>
+                </div>
+                <p class="descripcion-animal">Gato naranja muy cariñoso perdido hace 3 días. Es muy casero y seguramente
+                  está asustado.</p>
+                <div class="info-animal">
+                  <i class="bi bi-geo-alt"></i>
+                  <span>Malasaña, Madrid</span>
+                </div>
+                <div class="info-animal">
+                  <i class="bi bi-calendar"></i>
+                  <span>26/11/2024</span>
+                </div>
+                <div class="seccion-contacto">
+                  <p class="etiqueta-contacto">Contacto:</p>
+                  <div class="info-contacto">
+                    <i class="bi bi-person"></i>
+                    <span>Pedro López</span>
+                  </div>
+                  <div class="info-contacto">
+                    <i class="bi bi-telephone"></i>
+                    <span>+34 645 678 901</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 - Ave sin nombre (Encontrado) -->
+          <div class="col-md-4">
+            <div class="tarjeta-animal">
+              <div class="envoltura-imagen">
+                <img src="imagenes/photo-1552728089-57bdde30beb3.jpg" alt="Ave"
+                  class="imagen-tarjeta-animal">
+                <span class="insignia-estado encontrado">ENCONTRADO</span>
+              </div>
+              <div class="cuerpo-tarjeta-animal">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <div>
+                    <h3 class="nombre-animal">Ave sin nombre</h3>
+                    <p class="raza-animal">Loro Amazonas</p>
+                  </div>
+                  <span class="tipo-animal">
+                    <i class="bi bi-tag"></i>
+                    ave
+                  </span>
+                </div>
+                <p class="descripcion-animal">Loro verde y amarillo encontrado en balcón. Parece domesticado y repite
+                  algunas palabras.</p>
+                <div class="info-animal">
+                  <i class="bi bi-geo-alt"></i>
+                  <span>Salamanca, Madrid</span>
+                </div>
+                <div class="info-animal">
+                  <i class="bi bi-calendar"></i>
+                  <span>30/11/2024</span>
+                </div>
+                <div class="seccion-contacto">
+                  <p class="etiqueta-contacto">Contacto:</p>
+                  <div class="info-contacto">
+                    <i class="bi bi-person"></i>
+                    <span>Laura Fernández</span>
+                  </div>
+                  <div class="info-contacto">
+                    <i class="bi bi-telephone"></i>
+                    <span>+34 656 789 012</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 - Bella (Perdido) -->
+          <div class="col-md-4">
+            <div class="tarjeta-animal">
+              <div class="envoltura-imagen">
+                <img src="imagenes/photo-1587300003388-59208cc962cb.jpg" alt="Bella"
+                  class="imagen-tarjeta-animal">
+                <span class="insignia-estado perdido">PERDIDO</span>
+              </div>
+              <div class="cuerpo-tarjeta-animal">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                  <div>
+                    <h3 class="nombre-animal">Bella</h3>
+                    <p class="raza-animal">Chihuahua</p>
+                  </div>
+                  <span class="tipo-animal">
+                    <i class="bi bi-tag"></i>
+                    perro
+                  </span>
+                </div>
+                <p class="descripcion-animal">Pequeña chihuahua perdida. Muy nerviosa con extraños. Lleva arnés rosa.</p>
+                <div class="info-animal">
+                  <i class="bi bi-geo-alt"></i>
+                  <span>Chueca, Madrid</span>
+                </div>
+                <div class="info-animal">
+                  <i class="bi bi-calendar"></i>
+                  <span>29/11/2024</span>
+                </div>
+                <div class="seccion-contacto">
+                  <p class="etiqueta-contacto">Contacto:</p>
+                  <div class="info-contacto">
+                    <i class="bi bi-person"></i>
+                    <span>Isabel Sánchez</span>
+                  </div>
+                  <div class="info-contacto">
+                    <i class="bi bi-telephone"></i>
+                    <span>+34 667 890 123</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sección de Paginación -->
+        <div class="seccion-paginacion">
+          <span class="btn btn-warning">Anterior</span>
+          <nav aria-label="Paginación de reportes">
+            <ul class="pagination mb-0">
+              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">4</a></li>
+              <li class="page-item"><a class="page-link" href="#">5</a></li>
+              <li class="page-item"><a class="page-link" href="#">6</a></li>
+              <li class="page-item"><a class="page-link" href="#">7</a></li>
+              <li class="page-item"><a class="page-link" href="#">8</a></li>
+              <li class="page-item"><a class="page-link" href="#">9</a></li>
+              <li class="page-item"><a class="page-link" href="#">10</a></li>
+            </ul>
+          </nav>
+          <span class="btn btn-warning">Siguiente</span>
+        </div>
+      </section>
+
+      <!-- Sección CTA -->
+      <section class="seccion-cta">
+        <h2 class="titulo-cta">¿Has perdido o encontrado un animal?</h2>
+        <p class="descripcion-cta">No esperes más. Cada minuto cuenta cuando se trata de reunir a una familia con su
+          mascota.</p>
+        <a href="pages/report.html" class="btn btn-danger btn-crear-reporte">Crear Reporte</a>
+      </section>
+
+      <!-- Footer -->
+      <footer class="pie-pagina">
+        <div class="titulo-pie">Reencuentra Mascotas</div>
+        <div class="texto-pie">Conectando familias con sus mascotas perdidas</div>
+        <div class="texto-pie">© 2025 ReencuentraMascotas. Todos los derechos reservados.</div>
+      </footer>
+    </div>
+
+  
+    <!-- Modal detalle de tarjeta (inicialmente oculto) -->
+    <div class="modal-overlay" id="animalModal" aria-hidden="true">
+      <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-desc">
+        <button class="modal-close" aria-label="Cerrar">&times;</button>
+        <div class="modal-body">
+          <div class="modal-left">
+            <img alt="Imagen del animal" class="modal-imagen">
+          </div>
+          <div class="modal-right">
+            <h2 id="modal-title" class="modal-nombre">Nombre del animal</h2>
+            <p class="modal-estado"></p>
+            <p class="modal-raza"></p>
+            <p id="modal-desc" class="modal-descripcion"></p>
+            <div class="modal-info">
+              <div class="modal-ubicacion"></div>
+              <div class="modal-fecha"></div>
+            </div>
+            <div class="modal-contacto">
+              <h3>Contacto</h3>
+              <div class="modal-contacto-nombre"></div>
+              <div class="modal-contacto-telefono"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+
+</html> 

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre Reencuentra Mascotas</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <!-- Cabecera (misma estructura que index) -->
+    <header class="encabezado">
+      <div class="container-fluid">
+        <div class="d-flex align-items-center">
+          <div class="d-flex align-items-center flex-grow-1">
+            <div class="logo">
+              <img src="../imagenes/world-animal-day_8418203.png" class="img-fluid" alt="Logo">
+            </div>
+          </div>
+
+          <div class="text-center">
+            <span class="nombre-marca fw-bold h1">Reencuentra Mascotas</span>
+          </div>
+
+          <div class="d-flex justify-content-end flex-grow-1">
+            <a href="#" class="boton-perfil d-flex align-items-center">
+              <div class="avatar-perfil me-2">
+                <img src="../imagenes/programmer_560277.png" class="img-fluid" alt="Foto perfil">
+              </div>
+              <span>Perfil Usuario</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navegación -->
+    <nav class="d-flex justify-content-center align-items-center bg-info py-2">
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="about.html">Sobre Nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contacto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">Registro</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="contenedor-app">
+      <section class="seccion-principal">
+        <h1 class="titulo-principal">Nuestra misión</h1>
+        <p class="subtitulo-principal">En <strong>Reencuentra Mascotas</strong> ayudamos a reunir familias con sus mascotas perdidas mediante una comunidad activa y herramientas sencillas para publicar y buscar reportes.</p>
+        <img src="../imagenes/photo-1517849845537-4d257902454a.jpg" alt="Equipo ayudando" class="imagen-principal img-fluid my-4">
+      </section>
+
+      <section class="como-funciona">
+        <h2 class="titulo-seccion">¿Por qué existimos?</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="tarjeta-paso">
+              <div class="numero-paso paso-1">1</div>
+              <h3 class="titulo-paso">Comunidad</h3>
+              <p class="descripcion-paso">Nuestra comunidad comparte y verifica reportes para aumentar las probabilidades de reencuentro.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="tarjeta-paso">
+              <div class="numero-paso paso-2">2</div>
+              <h3 class="titulo-paso">Facilidad</h3>
+              <p class="descripcion-paso">Publica en segundos con fotos, ubicación y contacto para acelerar la búsqueda.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="tarjeta-paso">
+              <div class="numero-paso paso-3">3</div>
+              <h3 class="titulo-paso">Seguridad</h3>
+              <p class="descripcion-paso">Animamos a incluir información de contacto verificada para facilitar la entrega segura.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="seccion-cta">
+        <h2 class="titulo-cta">¿Quieres ayudar?</h2>
+        <p class="descripcion-cta">Comparte nuestras publicaciones y crea reportes cuando veas un animal perdido o encontrado.</p>
+        <a href="contact.html" class="btn btn-warning btn-crear-reporte">Contactar</a>
+      </section>
+
+      <footer class="pie-pagina">
+        <div class="titulo-pie">Reencuentra Mascotas</div>
+        <div class="texto-pie">Conectando familias con sus mascotas perdidas</div>
+        <div class="texto-pie">© 2025 ReencuentraMascotas. Todos los derechos reservados.</div>
+      </footer>
+    </div>
+
+
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
