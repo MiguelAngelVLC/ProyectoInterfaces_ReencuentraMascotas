@@ -2,7 +2,9 @@ import { defineConfig } from 'vite'
 import { resolve } from 'path'
 
 export default defineConfig({
-  build: {
+    base: '/ProyectoInterfaces_ReencuentraMascotas/',
+  
+    build: {
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
